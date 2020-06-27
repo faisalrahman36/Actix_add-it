@@ -8,7 +8,7 @@ async fn index_text() -> impl Responder {
 async fn index_html(num: web::Path<u32>) -> Result<HttpResponse> {
     //web::Path type to  string and string to num then add 10
     //let ans = format!("Answer is {}", (MyObj.num.to_string().parse::<i32>().unwrap() + 10).to_string());
-    let ans = format!("Answer is {}", (num.to_string().parse::<i32>().unwrap() + 10).to_string());
+    let ans = format!(r#"<html><body>Answer is <h1 style="color:blue"> {} <h1> </html></body>"#, (num.to_string().parse::<i32>().unwrap() + 10).to_string());
 
    Ok(HttpResponse::Ok().body(ans.to_string()))
 
