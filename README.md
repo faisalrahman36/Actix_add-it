@@ -1,5 +1,7 @@
 # Actix_add-it
 
+To read some basics about Actix, please read: http://review.primebne.com.pk/an-intorduction-to-rocket-actix-web-frameworks-for-rust/
+
 
 To run the code: 
 
